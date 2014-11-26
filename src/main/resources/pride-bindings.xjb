@@ -1,0 +1,228 @@
+<!--
+
+  Date: 22/7/2008
+  File: pride-bindings.xjb
+
+  Pride jaxb model is Copyright 2008 The European Bioinformatics Institute
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+-->
+<jxb:bindings version="2.1"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              schemaLocation="pride.xsd"
+              node="/xs:schema">
+
+    <jxb:globalBindings choiceContentProperty="true">
+        <!-- the serializable uid should reflect the version number 1.0.0 -->
+        <jxb:serializable uid="100"/>
+        <!-- this interface will be used to ensure type safety in generified methods -->
+        <xjc:superInterface name="uk.ac.ebi.pride.jaxbsm.model.PrideXmlObject"/>
+    </jxb:globalBindings>
+
+
+    <jxb:schemaBindings>
+        <jxb:package name="uk.ac.ebi.pride.jaxbsm.model"/>
+    </jxb:schemaBindings>
+
+    <!-- ATTENTION: Some code in the JMZML library expects that the class names are the same
+         as the element names of the mzML XML. -->
+
+    <jxb:bindings node="//xs:complexType[@name='acqSpecificationType']">
+        <jxb:class name="AcqSpecification"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='acquisitionType']">
+        <jxb:class name="Aquisition"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='adminType']">
+        <jxb:class name="Admin"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='analyzerListType']">
+        <jxb:class name="AnalyzerList"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='contactType']">
+        <jxb:class name="Contact"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='cvLookupType']">
+        <jxb:class name="CvLookup"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='cvParamType']">
+        <jxb:class name="CvParam"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='dataProcessingType']">
+        <jxb:class name="DataProcessing"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='dataType']">
+        <jxb:class name="Data"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='descriptionBaseType']">
+        <jxb:class name="DescriptionBase"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='descriptionType']">
+        <jxb:class name="Description"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='experimentCollType']">
+        <jxb:class name="ExperimentCollection"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='experimentType']">
+        <jxb:class name="Experiment"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='fragmentIonType']">
+        <jxb:class name="FragmentIon"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='gelFreeIdentificationType']">
+        <jxb:class name="GelFreeIdentification"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='gelType']">
+        <jxb:class name="Gel"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='identificationType']">
+        <jxb:class name="Identification"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='instrumentDescriptionType']">
+        <jxb:class name="Instrument"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='intenArrayBinaryType']">
+        <jxb:class name="IntenArrayBinary"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='modificationType']">
+        <jxb:class name="ModificationItem"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='mzArrayBinaryType']">
+        <jxb:class name="MzArrayBinary"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='mzDataType']">
+        <jxb:class name="MzData"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='paramType']">
+        <jxb:class name="Param"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='peakListBinaryType']">
+        <jxb:class name="PeakListBinary"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='peptideType']">
+        <jxb:class name="PeptideItem"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='pointType']">
+        <jxb:class name="GelLocation"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='precursorListType']">
+        <jxb:class name="PrecursorList"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='precursorType']">
+        <jxb:class name="Precursor"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='protocolStepsType']">
+        <jxb:class name="ProtocolSteps"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='protocolType']">
+        <jxb:class name="Protocol"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='referenceType']">
+        <jxb:class name="Reference"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='sampleDescriptionType']">
+        <jxb:class name="SampleDescription"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='simpleGelType']">
+        <jxb:class name="SimpleGel"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='softwareType']">
+        <jxb:class name="Software"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='sourceFileType']">
+        <jxb:class name="SourceFile"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='spectrumDescType']">
+        <jxb:class name="SpectrumDesc"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='spectrumInstrumentType']">
+        <jxb:class name="SpectrumInstrument"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='spectrumListType']">
+        <jxb:class name="SpectrumList"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='spectrumSettingsType']">
+        <jxb:class name="SpectrumSettings"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='spectrumType']">
+        <jxb:class name="Spectrum"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='supDataBinaryType']">
+        <jxb:class name="SupDataBinary"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='supDataDescType']">
+        <jxb:class name="SupDataDesc"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='supDataType']">
+        <jxb:class name="SupDataArray"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='supDescType']">
+        <jxb:class name="SupDesc"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='twoDimensionalIdentificationType']">
+        <jxb:class name="TwoDimensionalIdentification"/>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xs:complexType[@name='userParamType']">
+        <jxb:class name="UserParam"/>
+    </jxb:bindings>
+
+
+</jxb:bindings>
+

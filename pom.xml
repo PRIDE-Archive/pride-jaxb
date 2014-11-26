@@ -1,0 +1,182 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>uk.ac.ebi.pride.jaxb</groupId>
+    <artifactId>pride-jaxb</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.12</version>
+    <name>PRIDE JAXB model</name>
+    <description>This is the JAXB based API for PRIDE 2</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${basedir}/lib</outputDirectory>
+                    <overWriteReleases>true</overWriteReleases>
+                    <overWriteSnapshots>true</overWriteSnapshots>
+                    <excludeTransitive>false</excludeTransitive>
+                </configuration>
+            </plugin>
+            <!--<plugin>-->
+            <!--&lt;!&ndash; you can use this plugin to generate the jaxb object model from-->
+            <!--the schema and binding files specified below. Note: this will-->
+            <!--need an explicit maven goal call, since it is not intergrated-->
+            <!--into the standard mvn lifecycle. The goal to use is:-->
+            <!--org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.6.3:generate-->
+
+            <!--NOTE: the code generation may overwrite existing classes, so care-->
+            <!--should be taken with files that were manually modified.-->
+            <!--&ndash;&gt;-->
+            <!--<groupId>org.jvnet.jaxb2.maven2</groupId>-->
+            <!--<artifactId>maven-jaxb2-plugin</artifactId>-->
+            <!--<version>0.6.3</version>-->
+            <!--<configuration>-->
+            <!--<extension>true</extension>-->
+            <!--<schemaDirectory>src/main/resources</schemaDirectory>-->
+            <!--<schemaIncludes>-->
+            <!--<include>pride.xsd</include>-->
+            <!--</schemaIncludes>-->
+            <!--<bindingDirectory>src/main/resources</bindingDirectory>-->
+            <!--<bindingIncludes>-->
+            <!--<include>pride-bindings.xjb</include>-->
+            <!--</bindingIncludes>-->
+            <!--<generateDirectory>src/main/java</generateDirectory>-->
+            <!--<removeOldOutput>false</removeOldOutput>-->
+            <!--<forceRegenerate>true</forceRegenerate>-->
+            <!--<verbose>true</verbose>-->
+            <!--<args>-->
+            <!--<arg>-no-header</arg>-->
+            <!--</args>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>psidev.psi.tools</groupId>
+            <artifactId>xxindex</artifactId>
+            <version>0.14</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.13</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>2.2.4-1</version>
+        </dependency>
+        <dependency> <!-- needed for EscapingXMLStreamWriter to cope with ASCII control characters that are not properly escaped in JAXB -->
+            <groupId>it.unimi.dsi</groupId>
+            <artifactId>fastutil</artifactId>
+            <version>6.5.1</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <!--<repository>-->
+        <!--<id>java.net</id>-->
+        <!--<name>java.net Maven Repository</name>-->
+        <!--<url>https://maven-repository.dev.java.net/nonav/repository</url>-->
+        <!--<layout>legacy</layout>-->
+        <!--</repository>-->
+        <repository>
+            <id>ebi-repo</id>
+            <name>The EBI internal repository</name>
+            <url>http://www.ebi.ac.uk/~maven/m2repo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>ebi-snapshot-repo</id>
+            <name>The EBI internal snapshot repository</name>
+            <url>http://www.ebi.ac.uk/~maven/m2repo_snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven2-repository.dev.java.net</id>
+            <url>http://download.java.net/maven/2</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>maven-repository.dev.java.net</id>
+            <name>Java.net Maven 1 Repository (legacy)</name>
+            <url>http://download.java.net/maven/1</url>
+            <layout>legacy</layout>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>ebi-repo</id>
+            <name>EBI Repository</name>
+            <url>scp://lobster.ebi.ac.uk/homes/maven/public_html/m2repo</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>ebi-repo-snapshots</id>
+            <name>EBI Snapshots Repository</name>
+            <url>scp://lobster.ebi.ac.uk/homes/maven/public_html/m2repo_snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
