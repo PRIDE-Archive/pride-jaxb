@@ -174,9 +174,9 @@
 
     <!--scm git config-->
     <scm>
-        <connection>scm:git:github.com/PRIDE-Utilities/jmzIdentML.git</connection>
-        <developerConnection>scm:git:git@github.com:PRIDE-Utilities/jmzIdentML.git</developerConnection>
-        <url>https://github.com/PRIDE-Utilities/jmzIdentML.git</url>
+        <connection>scm:git:github.com/PRIDE-Utilities/pride-jaxb.git</connection>
+        <developerConnection>scm:git:git@github.com:PRIDE-Utilities/pride-jaxb.git</developerConnection>
+        <url>https://github.com/PRIDE-Utilities/pride-jaxb.git</url>
         <tag>HEAD</tag>
     </scm>
 
