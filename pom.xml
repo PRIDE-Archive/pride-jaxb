@@ -96,7 +96,7 @@
         <dependency>
             <groupId>psidev.psi.tools</groupId>
             <artifactId>xxindex</artifactId>
-            <version>0.15</version>
+            <version>0.17</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -122,61 +122,63 @@
     </dependencies>
 
     <repositories>
-        <!--<repository>-->
-        <!--<id>java.net</id>-->
-        <!--<name>java.net Maven Repository</name>-->
-        <!--<url>https://maven-repository.dev.java.net/nonav/repository</url>-->
-        <!--<layout>legacy</layout>-->
-        <!--</repository>-->
         <repository>
-            <id>ebi-repo</id>
-            <name>The EBI internal repository</name>
-            <url>http://www.ebi.ac.uk/~maven/m2repo</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <id>nexus-ebi-repo-old</id>
+            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo/</url>
         </repository>
         <repository>
-            <id>ebi-snapshot-repo</id>
-            <name>The EBI internal snapshot repository</name>
-            <url>http://www.ebi.ac.uk/~maven/m2repo_snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>nexus-ebi-release-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
+        </repository>
+        <repository>
+            <id>nexus-ebi-snapshot-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-snapshots/</url>
+        </repository>
+        <repository>
+            <id>springsource-repo</id>
+            <name>SpringSource Repository</name>
+            <url>http://repo.springsource.org/release</url>
+        </repository>
+
+        <repository>
+            <id>JBoss</id>
+            <name>JBoss repository</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
         </repository>
     </repositories>
 
+    <!-- PluginRepositores -->
     <pluginRepositories>
         <pluginRepository>
             <id>maven2-repository.dev.java.net</id>
             <url>http://download.java.net/maven/2</url>
         </pluginRepository>
-        <pluginRepository>
-            <id>maven-repository.dev.java.net</id>
-            <name>Java.net Maven 1 Repository (legacy)</name>
-            <url>http://download.java.net/maven/1</url>
-            <layout>legacy</layout>
-        </pluginRepository>
     </pluginRepositories>
 
+    <!-- Overwrites the previous repositories-->
     <distributionManagement>
         <!-- EBI repo -->
         <repository>
-            <id>nexus-ebi-repo</id>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo</url>
+            <id>pst-release</id>
+            <name>EBI Nexus Repository</name>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release</url>
         </repository>
         <!-- EBI SNAPSHOT repo -->
         <snapshotRepository>
-            <id>nexus-ebi-repo-snapshots</id>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo-snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+            <id>pst-snapshots</id>
+            <name>EBI Nexus Snapshots Repository</name>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <!--scm git config-->
+    <scm>
+        <connection>scm:git:github.com/PRIDE-Utilities/jmzIdentML.git</connection>
+        <developerConnection>scm:git:git@github.com:PRIDE-Utilities/jmzIdentML.git</developerConnection>
+        <url>https://github.com/PRIDE-Utilities/jmzIdentML.git</url>
+        <tag>HEAD</tag>
+    </scm>
 
 
 </project>
