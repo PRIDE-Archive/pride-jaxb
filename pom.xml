@@ -4,7 +4,7 @@
     <groupId>uk.ac.ebi.pride.jaxb</groupId>
     <artifactId>pride-jaxb</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.14</version>
+    <version>1.0.15-SNAPSHOT</version>
     <name>PRIDE JAXB model</name>
     <description>This is the JAXB based API for PRIDE 2</description>
 
@@ -188,7 +188,7 @@
         <connection>scm:git:github.com/PRIDE-Utilities/pride-jaxb.git</connection>
         <developerConnection>scm:git:git@github.com:PRIDE-Utilities/pride-jaxb.git</developerConnection>
         <url>https://github.com/PRIDE-Utilities/pride-jaxb.git</url>
-        <tag>pride-jaxb-1.0.14</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
