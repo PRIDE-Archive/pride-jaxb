@@ -186,7 +186,7 @@
     <!--scm git config-->
     <scm>
         <connection>scm:git:https://github.com/PRIDE-Utilities/pride-jaxb.git</connection>
-        <developerConnection>scm:git:https://github.com/RIDE-Utilities/pride-jaxb.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/PRIDE-Utilities/pride-jaxb.git</developerConnection>
         <url>https://github.com/PRIDE-Utilities/pride-jaxb.git</url>
         <tag>HEAD</tag>
     </scm>
