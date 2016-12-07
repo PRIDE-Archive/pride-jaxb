@@ -32,38 +32,6 @@
                     <excludeTransitive>false</excludeTransitive>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-            <!--&lt;!&ndash; you can use this plugin to generate the jaxb object model from-->
-            <!--the schema and binding files specified below. Note: this will-->
-            <!--need an explicit maven goal call, since it is not intergrated-->
-            <!--into the standard mvn lifecycle. The goal to use is:-->
-            <!--org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.6.3:generate-->
-
-            <!--NOTE: the code generation may overwrite existing classes, so care-->
-            <!--should be taken with files that were manually modified.-->
-            <!--&ndash;&gt;-->
-            <!--<groupId>org.jvnet.jaxb2.maven2</groupId>-->
-            <!--<artifactId>maven-jaxb2-plugin</artifactId>-->
-            <!--<version>0.6.3</version>-->
-            <!--<configuration>-->
-            <!--<extension>true</extension>-->
-            <!--<schemaDirectory>src/main/resources</schemaDirectory>-->
-            <!--<schemaIncludes>-->
-            <!--<include>pride.xsd</include>-->
-            <!--</schemaIncludes>-->
-            <!--<bindingDirectory>src/main/resources</bindingDirectory>-->
-            <!--<bindingIncludes>-->
-            <!--<include>pride-bindings.xjb</include>-->
-            <!--</bindingIncludes>-->
-            <!--<generateDirectory>src/main/java</generateDirectory>-->
-            <!--<removeOldOutput>false</removeOldOutput>-->
-            <!--<forceRegenerate>true</forceRegenerate>-->
-            <!--<verbose>true</verbose>-->
-            <!--<args>-->
-            <!--<arg>-no-header</arg>-->
-            <!--</args>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
