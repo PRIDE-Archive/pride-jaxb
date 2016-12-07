@@ -107,7 +107,7 @@
         <dependency>
             <groupId>psidev.psi.tools</groupId>
             <artifactId>xxindex</artifactId>
-            <version>0.17</version>
+            <version>0.18</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -133,10 +133,6 @@
     </dependencies>
 
     <repositories>
-        <repository>
-            <id>nexus-ebi-repo-old</id>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo/</url>
-        </repository>
         <repository>
             <id>nexus-ebi-release-repo</id>
             <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
@@ -185,8 +181,8 @@
 
     <!--scm git config-->
     <scm>
-        <connection>scm:git:github.com/PRIDE-Utilities/pride-jaxb.git</connection>
-        <developerConnection>scm:git:git@github.com:PRIDE-Utilities/pride-jaxb.git</developerConnection>
+        <connection>scm:git:https://github.com/PRIDE-Utilities/pride-jaxb.git</connection>
+        <developerConnection>scm:git:https://github.com/RIDE-Utilities/pride-jaxb.git</developerConnection>
         <url>https://github.com/PRIDE-Utilities/pride-jaxb.git</url>
         <tag>HEAD</tag>
     </scm>
