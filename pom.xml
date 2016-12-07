@@ -8,6 +8,10 @@
     <name>PRIDE JAXB model</name>
     <description>This is the JAXB based API for PRIDE 2</description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
