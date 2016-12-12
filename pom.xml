@@ -35,13 +35,14 @@
     <properties>
         <uk.ac.ebi.pride.architectural.pride-logging.version>1.0.0</uk.ac.ebi.pride.architectural.pride-logging.version>
         <uk.ac.ebi.pride.architectural.pride-tdd.version>1.0.3</uk.ac.ebi.pride.architectural.pride-tdd.version>
+        <psidev.psi.tools-xxindex.version>0.20</psidev.psi.tools-xxindex.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>psidev.psi.tools</groupId>
             <artifactId>xxindex</artifactId>
-            <version>0.20</version>
+            <version>${psidev.psi.tools-xxindex.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
