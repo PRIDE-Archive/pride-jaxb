@@ -41,11 +41,11 @@ public class Description
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected Admin admin;
+    private Admin admin;
     @XmlElement(required = true)
-    protected Instrument instrument;
+    private Instrument instrument;
     @XmlElement(required = true)
-    protected DataProcessing dataProcessing;
+    private DataProcessing dataProcessing;
 
     /**
      * Gets the value of the admin property.

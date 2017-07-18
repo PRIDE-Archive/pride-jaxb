@@ -1,6 +1,5 @@
 package uk.ac.ebi.pride.jaxb.xml;
 
-import org.junit.Before;
 import org.junit.Test;
 import uk.ac.ebi.pride.jaxb.model.CvParam;
 import uk.ac.ebi.pride.jaxb.xml.marshaller.PrideXmlMarshaller;
@@ -8,9 +7,7 @@ import uk.ac.ebi.pride.jaxb.xml.marshaller.PrideXmlMarshallerFactory;
 import uk.ac.ebi.pride.jaxb.xml.unmarshaller.PrideXmlUnmarshaller;
 import uk.ac.ebi.pride.jaxb.xml.unmarshaller.PrideXmlUnmarshallerFactory;
 
-import java.io.File;
 import java.io.StringWriter;
-import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
 

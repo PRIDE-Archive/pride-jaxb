@@ -39,9 +39,9 @@ public class SpectrumList
 {
 
     private final static long serialVersionUID = 100L;
-    protected List<Spectrum> spectrum;
+    private List<Spectrum> spectrum;
     @XmlAttribute(required = true)
-    protected int count;
+    private int count;
 
     /**
      * Gets the value of the spectrum property.
@@ -67,7 +67,7 @@ public class SpectrumList
      */
     public List<Spectrum> getSpectrum() {
         if (spectrum == null) {
-            spectrum = new ArrayList<Spectrum>();
+            spectrum = new ArrayList<>();
         }
         return this.spectrum;
     }

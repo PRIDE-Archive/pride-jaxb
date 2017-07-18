@@ -24,7 +24,7 @@ public interface XmlIndexer {
      * @param xpath input xpath.
      * @return Iterator<String> an iterator of xml strings.
      */
-    public Iterator<String> getXmlStringIterator(String xpath);
+    Iterator<String> getXmlStringIterator(String xpath);
 
 
     /**
@@ -33,21 +33,21 @@ public interface XmlIndexer {
      * @param xpath input xpath.
      * @return List<String> an list of xml strings.
      */
-    public List<String> getXmlStringList(String xpath);
+    List<String> getXmlStringList(String xpath);
 
     /**
      * Get the number of elements matched by the input xpath.
      * @param xpath xpath expression.
      * @return int  number of elements.
      */
-    public int getCount(String xpath);
+    int getCount(String xpath);
 
     /**
      * Get an collection of IndexElements based on the input xpath.
      * @param xpath xpath expression.
      * @return Collection<IndexElement> an collection of IndexElements.
      */
-    public Collection<IndexElement> getIndexElements(String xpath);
+    Collection<IndexElement> getIndexElements(String xpath);
 
     /**
      * Get an iterator of xml string matched by the xpath within the range of start and stop.
@@ -56,20 +56,20 @@ public interface XmlIndexer {
      * @param stop  stop position of the file.
      * @return Iterator<String>  an iterator of xml strings.
      */
-    public Iterator<String> getXmlStringWithinRange(String xpath, long start, long stop);
+    Iterator<String> getXmlStringWithinRange(String xpath, long start, long stop);
 
     /**
      * Get a collection of xpaths predefined for indexing.
      * @return Collection<String>   an collection of xpath strings.
      */
-    public Collection<String> getXpath();
+    Collection<String> getXpath();
 
     /**
      * Get the xml string by index element.
      * @param indexElement  index element.
      * @return String   xml string.
      */
-    public String getXmlByIndexElement(IndexElement indexElement);
+    String getXmlByIndexElement(IndexElement indexElement);
 
     /**
      * Get an snippet of xml with the start and stop range.
@@ -77,6 +77,6 @@ public interface XmlIndexer {
      * @param stop  stop of the range.
      * @return String   xml string.
      */
-    public String getXmlSnippet(long start, long stop);
+    String getXmlSnippet(long start, long stop);
 }
 

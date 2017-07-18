@@ -41,9 +41,9 @@ public class AnalyzerList
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected List<Param> analyzer;
+    private List<Param> analyzer;
     @XmlAttribute(required = true)
-    protected int count;
+    private int count;
 
     /**
      * Gets the value of the analyzer property.
@@ -69,7 +69,7 @@ public class AnalyzerList
      */
     public List<Param> getAnalyzer() {
         if (analyzer == null) {
-            analyzer = new ArrayList<Param>();
+            analyzer = new ArrayList<>();
         }
         return this.analyzer;
     }

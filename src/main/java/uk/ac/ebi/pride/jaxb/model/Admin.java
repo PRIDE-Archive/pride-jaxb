@@ -53,11 +53,11 @@ public class Admin
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String sampleName;
-    protected SampleDescription sampleDescription;
-    protected SourceFile sourceFile;
+    private String sampleName;
+    private SampleDescription sampleDescription;
+    private SourceFile sourceFile;
     @XmlElement(required = true)
-    protected List<Contact> contact;
+    private List<Contact> contact;
 
     /**
      * Gets the value of the sampleName property.
@@ -155,7 +155,7 @@ public class Admin
      */
     public List<Contact> getContact() {
         if (contact == null) {
-            contact = new ArrayList<Contact>();
+            contact = new ArrayList<>();
         }
         return this.contact;
     }

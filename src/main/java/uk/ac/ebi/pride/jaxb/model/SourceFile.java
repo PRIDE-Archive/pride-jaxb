@@ -44,11 +44,11 @@ public class SourceFile
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String nameOfFile;
+    private String nameOfFile;
     @XmlElement(required = true)
     @XmlSchemaType(name = "anyURI")
-    protected String pathToFile;
-    protected String fileType;
+    private String pathToFile;
+    private String fileType;
 
     /**
      * Gets the value of the nameOfFile property.

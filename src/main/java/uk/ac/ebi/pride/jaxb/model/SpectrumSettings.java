@@ -40,9 +40,9 @@ public class SpectrumSettings
 {
 
     private final static long serialVersionUID = 100L;
-    protected AcqSpecification acqSpecification;
+    private AcqSpecification acqSpecification;
     @XmlElement(required = true)
-    protected SpectrumInstrument spectrumInstrument;
+    private SpectrumInstrument spectrumInstrument;
 
     /**
      * Gets the value of the acqSpecification property.

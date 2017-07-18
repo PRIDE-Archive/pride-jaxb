@@ -54,22 +54,22 @@ public class PeptideItem
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "Sequence", required = true)
-    protected String sequence;
+    private String sequence;
     @XmlElement(name = "Start")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger start;
+    private BigInteger start;
     @XmlElement(name = "End")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger end;
+    private BigInteger end;
     @XmlElement(name = "SpectrumReference")
     @XmlJavaTypeAdapter(SpectrumAdapter.class)
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected Spectrum spectrum;
+    private Spectrum spectrum;
     @XmlElement(name = "ModificationItem")
-    protected List<ModificationItem> modificationItem;
+    private List<ModificationItem> modificationItem;
     @XmlElement(name = "FragmentIon")
-    protected List<FragmentIon> fragmentIon;
-    protected Param additional;
+    private List<FragmentIon> fragmentIon;
+    private Param additional;
 
     /**
      * Gets the value of the sequence property.
@@ -191,7 +191,7 @@ public class PeptideItem
      */
     public List<ModificationItem> getModificationItem() {
         if (modificationItem == null) {
-            modificationItem = new ArrayList<ModificationItem>();
+            modificationItem = new ArrayList<>();
         }
         return this.modificationItem;
     }
@@ -220,7 +220,7 @@ public class PeptideItem
      */
     public List<FragmentIon> getFragmentIon() {
         if (fragmentIon == null) {
-            fragmentIon = new ArrayList<FragmentIon>();
+            fragmentIon = new ArrayList<>();
         }
         return this.fragmentIon;
     }

@@ -44,7 +44,7 @@ public abstract class PeakListBinary
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected Data data;
+    private Data data;
 
     /**
      * Gets the value of the data property.

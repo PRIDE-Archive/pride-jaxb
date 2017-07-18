@@ -40,14 +40,14 @@ public class CvLookup
 
     private final static long serialVersionUID = 100L;
     @XmlAttribute(required = true)
-    protected String cvLabel;
+    private String cvLabel;
     @XmlAttribute
-    protected String fullName;
+    private String fullName;
     @XmlAttribute(required = true)
-    protected String version;
+    private String version;
     @XmlAttribute(required = true)
     @XmlSchemaType(name = "anyURI")
-    protected String address;
+    private String address;
 
     /**
      * Gets the value of the cvLabel property.

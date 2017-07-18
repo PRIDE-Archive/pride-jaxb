@@ -47,14 +47,14 @@ public class Precursor
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected Param ionSelection;
+    private Param ionSelection;
     @XmlElement(required = true)
-    protected Param activation;
+    private Param activation;
     @XmlAttribute(required = true)
-    protected int msLevel;
+    private int msLevel;
     @XmlAttribute(name = "spectrumRef", required = true)
     @XmlJavaTypeAdapter(SpectrumAdapter.class)
-    protected Spectrum spectrum;
+    private Spectrum spectrum;
 
     /**
      * Gets the value of the ionSelection property.
@@ -107,8 +107,7 @@ public class Precursor
     /**
      * Gets the value of the msLevel property.
      *
-     * @return
-     * @return
+     * @return MS level
      */
     public int getMsLevel() {
         return msLevel;
@@ -117,7 +116,7 @@ public class Precursor
     /**
      * Sets the value of the msLevel property.
      *
-     * @param value
+     * @param value Set the MS Level
      */
     public void setMsLevel(int value) {
         this.msLevel = value;
@@ -126,7 +125,7 @@ public class Precursor
     /**
      * Gets the value of the spectrumRef property.
      *
-     * @return
+     * @return Return the Spectrum
      */
     public Spectrum getSpectrum() {
         return spectrum;

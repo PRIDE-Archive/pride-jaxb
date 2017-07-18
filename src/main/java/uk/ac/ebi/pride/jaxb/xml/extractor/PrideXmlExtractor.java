@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.jaxb.xml.extractor;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import psidev.psi.tools.xxindex.index.IndexElement;
 import uk.ac.ebi.pride.jaxb.xml.PrideXmlXpath;
 import uk.ac.ebi.pride.jaxb.xml.xxindex.XmlIndexer;
@@ -23,7 +25,7 @@ import java.util.regex.Pattern;
  */
 public class PrideXmlExtractor {
 
-    private static final Logger logger = Logger.getLogger(PrideXmlExtractor.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(PrideXmlExtractor.class.getName());
 
     /**
      * pattern to match ids
@@ -103,7 +105,7 @@ public class PrideXmlExtractor {
 
     private Map<String, IndexElement> initCacheMap(String xpath, Pattern idPattern) {
         // 1. create a empty id map
-        Map<String, IndexElement> idMap = new LinkedHashMap<String, IndexElement>();
+        Map<String, IndexElement> idMap = new LinkedHashMap<>();
         // 2. get index elements from xpath
         Collection<IndexElement> indexElements = indexer.getIndexElements(xpath);
 
@@ -121,7 +123,7 @@ public class PrideXmlExtractor {
 
     private Map<String, IndexElement> initIdentificationCacheMap(String xpath) {
         // 1. create a empty id map
-        Map<String, IndexElement> idMap = new LinkedHashMap<String, IndexElement>();
+        Map<String, IndexElement> idMap = new LinkedHashMap<>();
         // 2. get index elements from xpath
         Collection<IndexElement> indexElements = indexer.getIndexElements(xpath);
         // 3. generated Id index
@@ -141,7 +143,7 @@ public class PrideXmlExtractor {
 
     private Map<String, List<IndexElement>> initPeptideCacheMap() {
         // 1. create a empty identification to peptide mapping map
-        Map<String, List<IndexElement>> identPeptideMap = new LinkedHashMap<String, List<IndexElement>>();
+        Map<String, List<IndexElement>> identPeptideMap = new LinkedHashMap<>();
         // 2. get all gel free peptide index element
         Collection<IndexElement> gelFreePeptideElements = indexer.getIndexElements(PrideXmlXpath.GELFREE_PEPTIDE.getXpath());
         // 3. iterate over each gel free peptide index element
@@ -162,7 +164,7 @@ public class PrideXmlExtractor {
 
     private List<String> initIdentifiedSpectrumList() {
         // 1. create an empty list for storing identified spectrum ids.
-        List<String> identifiedList = new ArrayList<String>();
+        List<String> identifiedList = new ArrayList<>();
 
         // 2. get all gel free peptide spectrum references
         Collection<IndexElement> gelFreeSpectrumRefElements = indexer.getIndexElements(PrideXmlXpath.GELFREE_PEPTIDE_SPEC_REF.getXpath());
@@ -209,7 +211,7 @@ public class PrideXmlExtractor {
     private void addIdentPeptide(String identId, IndexElement peptideElement, Map<String, List<IndexElement>> identPeptideMap) {
         List<IndexElement> elements = identPeptideMap.get(identId);
         if (elements == null) {
-            elements = new ArrayList<IndexElement>();
+            elements = new ArrayList<>();
             identPeptideMap.put(identId, elements);
         }
         elements.add(peptideElement);
@@ -270,7 +272,7 @@ public class PrideXmlExtractor {
     }
 
     public List<String> getSpectrumIds() {
-        return new ArrayList<String>(spectrumIdMap.keySet());
+        return new ArrayList<>(spectrumIdMap.keySet());
     }
 
     public String getSpectrumXmlString(String id) {
@@ -289,7 +291,7 @@ public class PrideXmlExtractor {
      * @return Map<String, IndexElement>   spectrum id to index element map
      */
     public Map<String, IndexElement> getSpectrumIndices() {
-        return new HashMap<String, IndexElement>(spectrumIdMap);
+        return new HashMap<>(spectrumIdMap);
     }
 
     /**
@@ -320,7 +322,7 @@ public class PrideXmlExtractor {
     }
 
     public List<String> getIdentIds() {
-        List<String> ids = new ArrayList<String>(gelFreeAccMap.keySet());
+        List<String> ids = new ArrayList<>(gelFreeAccMap.keySet());
         ids.addAll(twoDimAccMap.keySet());
         return ids;
     }
@@ -339,7 +341,7 @@ public class PrideXmlExtractor {
     }
 
     public List<String> getGelFreeIdentIds() {
-        return new ArrayList<String>(gelFreeAccMap.keySet());
+        return new ArrayList<>(gelFreeAccMap.keySet());
     }
 
     public String getGelFreeIdentXmlString(String id) {
@@ -357,7 +359,7 @@ public class PrideXmlExtractor {
     }
 
     public List<String> getTwoDimIdentIds() {
-        return new ArrayList<String>(twoDimAccMap.keySet());
+        return new ArrayList<>(twoDimAccMap.keySet());
     }
 
     public String getTwoDimIdentXmlString(String id) {
@@ -429,7 +431,7 @@ public class PrideXmlExtractor {
      * @return List<String> a list of peptide xml strings
      */
     public List<String> getPeptideXmlStrings(String identId) {
-        List<String> peptides = new ArrayList<String>();
+        List<String> peptides = new ArrayList<>();
         List<IndexElement> elements = identToPeptideMap.get(identId);
         for (IndexElement element : elements) {
             peptides.add(indexer.getXmlByIndexElement(element));

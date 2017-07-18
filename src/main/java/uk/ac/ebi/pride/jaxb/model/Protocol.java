@@ -45,9 +45,9 @@ public class Protocol
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "ProtocolName", required = true)
-    protected String protocolName;
+    private String protocolName;
     @XmlElement(name = "ProtocolSteps")
-    protected ProtocolSteps protocolSteps;
+    private ProtocolSteps protocolSteps;
 
     /**
      * Gets the value of the protocolName property.

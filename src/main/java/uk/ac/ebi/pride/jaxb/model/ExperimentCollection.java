@@ -41,9 +41,9 @@ public class ExperimentCollection
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "Experiment", required = true)
-    protected List<Experiment> experiment;
+    private List<Experiment> experiment;
     @XmlAttribute(required = true)
-    protected String version;
+    private String version;
 
     /**
      * Gets the value of the experiment property.
@@ -69,7 +69,7 @@ public class ExperimentCollection
      */
     public List<Experiment> getExperiment() {
         if (experiment == null) {
-            experiment = new ArrayList<Experiment>();
+            experiment = new ArrayList<>();
         }
         return this.experiment;
     }

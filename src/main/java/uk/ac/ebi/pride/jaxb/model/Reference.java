@@ -41,8 +41,8 @@ public class Reference
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "RefLine", required = true)
-    protected String refLine;
-    protected Param additional;
+    private String refLine;
+    private Param additional;
 
     /**
      * Gets the value of the refLine property.

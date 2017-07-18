@@ -15,7 +15,7 @@ import javax.xml.bind.JAXBException;
  */
 public interface PrideXmlUnmarshaller {
 
-    public <T extends PrideXmlObject> T unmarshal(String xmlSnippet, Class<T> cls) throws JAXBException;
+    <T extends PrideXmlObject> T unmarshal(String xmlSnippet, Class<T> cls) throws JAXBException;
 
-    public void setSpectrumAdapter(SpectrumAdapter adapter);
+    void setSpectrumAdapter(SpectrumAdapter adapter);
 }

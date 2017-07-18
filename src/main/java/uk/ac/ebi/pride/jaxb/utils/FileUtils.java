@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.jaxb.utils;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.URL;
@@ -12,7 +14,7 @@ import java.net.URL;
  */
 public class FileUtils {
 
-    private static Logger logger = Logger.getLogger(FileUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
     public static File getFileFromURL(URL url) {
 

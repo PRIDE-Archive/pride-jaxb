@@ -41,9 +41,9 @@ public class GelLocation
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "XCoordinate")
-    protected double xCoordinate;
+    private double xCoordinate;
     @XmlElement(name = "YCoordinate")
-    protected double yCoordinate;
+    private double yCoordinate;
 
     /**
      * Gets the value of the xCoordinate property.

@@ -76,30 +76,30 @@ public abstract class Identification implements Serializable, PrideXmlObject
     @XmlTransient
     private String id;
     @XmlElement(name = "Accession", required = true)
-    protected String accession;
+    private String accession;
     @XmlElement(name = "AccessionVersion")
-    protected String accessionVersion;
+    private String accessionVersion;
     @XmlElement(name = "SpliceIsoform")
-    protected String spliceIsoform;
+    private String spliceIsoform;
     @XmlElement(name = "Database", required = true)
-    protected String database;
+    private String database;
     @XmlElement(name = "DatabaseVersion")
-    protected String databaseVersion;
+    private String databaseVersion;
     @XmlElement(name = "PeptideItem")
-    protected List<PeptideItem> peptideItem;
+    private List<PeptideItem> peptideItem;
     @XmlElement(name = "SpectrumReference")
     @XmlJavaTypeAdapter(SpectrumAdapter.class)
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected Spectrum spectrum;
-    protected Param additional;
+    private Spectrum spectrum;
+    private Param additional;
     @XmlElement(name = "Score")
-    protected Double score;
+    private Double score;
     @XmlElement(name = "Threshold")
-    protected Double threshold;
+    private Double threshold;
     @XmlElement(name = "SearchEngine")
-    protected String searchEngine;
+    private String searchEngine;
     @XmlElement(name = "SequenceCoverage")
-    protected Double sequenceCoverage;
+    private Double sequenceCoverage;
 
     public String getId() {
         return id;
@@ -257,7 +257,7 @@ public abstract class Identification implements Serializable, PrideXmlObject
      */
     public List<PeptideItem> getPeptideItem() {
         if (peptideItem == null) {
-            peptideItem = new ArrayList<PeptideItem>();
+            peptideItem = new ArrayList<>();
         }
         return this.peptideItem;
     }

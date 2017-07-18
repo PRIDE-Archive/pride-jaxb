@@ -39,7 +39,7 @@ public class ProtocolSteps
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "StepDescription")
-    protected List<Param> stepDescription;
+    private List<Param> stepDescription;
 
     /**
      * Gets the value of the stepDescription property.
@@ -65,7 +65,7 @@ public class ProtocolSteps
      */
     public List<Param> getStepDescription() {
         if (stepDescription == null) {
-            stepDescription = new ArrayList<Param>();
+            stepDescription = new ArrayList<>();
         }
         return this.stepDescription;
     }

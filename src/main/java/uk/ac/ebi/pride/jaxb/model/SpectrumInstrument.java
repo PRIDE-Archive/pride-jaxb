@@ -36,11 +36,11 @@ public class SpectrumInstrument
 
     private final static long serialVersionUID = 100L;
     @XmlAttribute(required = true)
-    protected int msLevel;
+    private int msLevel;
     @XmlAttribute
-    protected Float mzRangeStart;
+    private Float mzRangeStart;
     @XmlAttribute
-    protected Float mzRangeStop;
+    private Float mzRangeStop;
 
     /**
      * Gets the value of the msLevel property.

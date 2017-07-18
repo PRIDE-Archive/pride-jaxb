@@ -54,13 +54,13 @@ public class Data
 
     private final static long serialVersionUID = 100L;
     @XmlValue
-    protected byte[] value;
+    private byte[] value;
     @XmlAttribute(required = true)
-    protected String precision;
+    private String precision;
     @XmlAttribute(required = true)
-    protected String endian;
+    private String endian;
     @XmlAttribute(required = true)
-    protected int length;
+    private int length;
 
     /**
      * Gets the value of the value property.
@@ -81,7 +81,7 @@ public class Data
      *     byte[]
      */
     public void setValue(byte[] value) {
-        this.value = ((byte[]) value);
+        this.value = value;
     }
 
     /**

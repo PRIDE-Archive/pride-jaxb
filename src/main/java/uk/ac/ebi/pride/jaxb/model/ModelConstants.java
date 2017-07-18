@@ -15,9 +15,9 @@ import java.util.Map;
 public class ModelConstants {
 
     public static final String MODEL_PKG = "uk.ac.ebi.pride.jaxb.model";
-    public static final String PRIDE_NS = "";
+    private static final String PRIDE_NS = "";
 
-    private static Map<Class, QName> modelQNames = new HashMap<Class, QName>();
+    private static Map<Class, QName> modelQNames = new HashMap<>();
 
     static {
 
@@ -70,7 +70,7 @@ public class ModelConstants {
     }
 
 
-    public static boolean isRegisteredClass(Class cls) {
+    private static boolean isRegisteredClass(Class cls) {
         return modelQNames.containsKey(cls);
     }
 

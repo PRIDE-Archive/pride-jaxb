@@ -42,11 +42,11 @@ public class SupDataBinary implements Serializable, PrideXmlObject
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String arrayName;
+    private String arrayName;
     @XmlElement(required = true)
-    protected Data data;
+    private Data data;
     @XmlAttribute(required = true)
-    protected int id;
+    private int id;
 
     /**
      * Gets the value of the arrayName property.

@@ -75,13 +75,13 @@ public enum PrideXmlXpath {
     private static final Set<String> xpaths;
 
     static {
-        xpaths = new HashSet<String>();
+        xpaths = new HashSet<>();
         for (PrideXmlXpath prideXpath : values()) {
             xpaths.add(prideXpath.getXpath());
         }
     }
 
-    private PrideXmlXpath(String xpath, Class clazz) {
+    PrideXmlXpath(String xpath, Class clazz) {
         this.xpath = xpath;
         this.type = clazz;
     }

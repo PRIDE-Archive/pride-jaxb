@@ -53,14 +53,14 @@ public class Instrument
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String instrumentName;
+    private String instrumentName;
     @XmlElement(required = true)
-    protected Param source;
+    private Param source;
     @XmlElement(required = true)
-    protected AnalyzerList analyzerList;
+    private AnalyzerList analyzerList;
     @XmlElement(required = true)
-    protected Param detector;
-    protected Param additional;
+    private Param detector;
+    private Param additional;
 
     /**
      * Gets the value of the instrumentName property.

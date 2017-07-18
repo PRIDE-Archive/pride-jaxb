@@ -54,19 +54,19 @@ public class Spectrum
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected SpectrumDesc spectrumDesc;
-    protected List<SupDesc> supDesc;
+    private SpectrumDesc spectrumDesc;
+    private List<SupDesc> supDesc;
     @XmlElement(required = true)
-    protected MzArrayBinary mzArrayBinary;
+    private MzArrayBinary mzArrayBinary;
     @XmlElement(required = true)
-    protected IntenArrayBinary intenArrayBinary;
+    private IntenArrayBinary intenArrayBinary;
     @XmlElements({
         @XmlElement(name = "supDataArray", type = SupDataArray.class),
         @XmlElement(name = "supDataArrayBinary", type = SupDataBinary.class)
     })
-    protected List<PrideXmlObject> supDataArrayBinaryOrSupDataArray;
+    private List<PrideXmlObject> supDataArrayBinaryOrSupDataArray;
     @XmlAttribute(required = true)
-    protected int id;
+    private int id;
 
     /**
      * Gets the value of the spectrumDesc property.
@@ -116,7 +116,7 @@ public class Spectrum
      */
     public List<SupDesc> getSupDesc() {
         if (supDesc == null) {
-            supDesc = new ArrayList<SupDesc>();
+            supDesc = new ArrayList<>();
         }
         return this.supDesc;
     }
@@ -178,8 +178,8 @@ public class Spectrum
     /**
      * Convert a data object to number array.
      *
-     * @param rawData
-     * @return
+     * @param rawData Raw Data
+     * @return Number of Peaks
      */
     private Number[] getNumberArray(Data rawData) {
         //get the binary
@@ -192,9 +192,7 @@ public class Spectrum
         //check endianess
         ByteOrder order = "big".equals(rawData.getEndian()) ? ByteOrder.BIG_ENDIAN : ByteOrder.LITTLE_ENDIAN;
 
-        Number[] numberArr = BinaryDataUtils.toNumberArray(binary, dataType, order);
-
-        return numberArr;
+        return BinaryDataUtils.toNumberArray(binary, dataType, order);
     }
 
     /**
@@ -234,7 +232,7 @@ public class Spectrum
      */
     public List<PrideXmlObject> getSupDataArrayBinaryOrSupDataArray() {
         if (supDataArrayBinaryOrSupDataArray == null) {
-            supDataArrayBinaryOrSupDataArray = new ArrayList<PrideXmlObject>();
+            supDataArrayBinaryOrSupDataArray = new ArrayList<>();
         }
         return this.supDataArrayBinaryOrSupDataArray;
     }

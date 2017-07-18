@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.jaxb.xml;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import psidev.psi.tools.xxindex.index.IndexElement;
 import uk.ac.ebi.pride.jaxb.model.*;
 import uk.ac.ebi.pride.jaxb.utils.FileUtils;
@@ -25,7 +27,8 @@ import java.util.regex.Pattern;
  * Time: 12:13:31
  */
 public class PrideXmlReader {
-    private static final Logger logger = Logger.getLogger(PrideXmlReader.class.getName());
+
+    private static final Logger logger = LoggerFactory.getLogger(PrideXmlReader.class.getName());
     /**
      * pattern to match the content of a element
      */
@@ -90,7 +93,7 @@ public class PrideXmlReader {
 
     @SuppressWarnings("unchecked")
     public List<Reference> getReferences() {
-        List<Reference> refs = new ArrayList<Reference>();
+        List<Reference> refs = new ArrayList<>();
 
         List<String> referenceXmlStrings = extractor.getReferenceXmlStrings();
         for (String refXml : referenceXmlStrings) {
@@ -119,7 +122,7 @@ public class PrideXmlReader {
 
     @SuppressWarnings("unchecked")
     public List<CvLookup> getCvLookups() {
-        List<CvLookup> cvLookups = new ArrayList<CvLookup>();
+        List<CvLookup> cvLookups = new ArrayList<>();
         List<String> cvLookupStrings = extractor.getCvLookupXmlStrings();
         for (String cvLookupString : cvLookupStrings) {
             cvLookups.add(this.<CvLookup>unmarshalXmlToPrideObject(cvLookupString,
@@ -238,7 +241,7 @@ public class PrideXmlReader {
     }
 
     public List<PeptideItem> getPeptides(String identId) {
-        List<PeptideItem> peptides = new ArrayList<PeptideItem>();
+        List<PeptideItem> peptides = new ArrayList<>();
         List<String> xmls = extractor.getPeptideXmlStrings(identId);
         if (xmls != null) {
             for (String xml : xmls) {

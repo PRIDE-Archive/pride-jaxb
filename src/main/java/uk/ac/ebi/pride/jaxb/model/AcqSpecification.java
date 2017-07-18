@@ -50,13 +50,13 @@ public class AcqSpecification
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected List<Aquisition> acquisition;
+    private List<Aquisition> acquisition;
     @XmlAttribute(required = true)
-    protected String spectrumType;
+    private String spectrumType;
     @XmlAttribute(required = true)
-    protected String methodOfCombination;
+    private String methodOfCombination;
     @XmlAttribute(required = true)
-    protected int count;
+    private int count;
 
     /**
      * Gets the value of the acquisition property.
@@ -82,7 +82,7 @@ public class AcqSpecification
      */
     public List<Aquisition> getAcquisition() {
         if (acquisition == null) {
-            acquisition = new ArrayList<Aquisition>();
+            acquisition = new ArrayList<>();
         }
         return this.acquisition;
     }

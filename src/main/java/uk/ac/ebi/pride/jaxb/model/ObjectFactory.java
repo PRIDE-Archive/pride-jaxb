@@ -390,7 +390,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "double", scope = SupDataArray.class)
     public JAXBElement<Double> createSupDataArrayDouble(Double value) {
-        return new JAXBElement<Double>(_SupDataArrayDouble_QNAME, Double.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayDouble_QNAME, Double.class, SupDataArray.class, value);
     }
 
     /**
@@ -399,7 +399,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "string", scope = SupDataArray.class)
     public JAXBElement<String> createSupDataArrayString(String value) {
-        return new JAXBElement<String>(_SupDataArrayString_QNAME, String.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayString_QNAME, String.class, SupDataArray.class, value);
     }
 
     /**
@@ -408,7 +408,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "time", scope = SupDataArray.class)
     public JAXBElement<Float> createSupDataArrayTime(Float value) {
-        return new JAXBElement<Float>(_SupDataArrayTime_QNAME, Float.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayTime_QNAME, Float.class, SupDataArray.class, value);
     }
 
     /**
@@ -417,7 +417,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "float", scope = SupDataArray.class)
     public JAXBElement<Float> createSupDataArrayFloat(Float value) {
-        return new JAXBElement<Float>(_SupDataArrayFloat_QNAME, Float.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayFloat_QNAME, Float.class, SupDataArray.class, value);
     }
 
     /**
@@ -426,7 +426,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "int", scope = SupDataArray.class)
     public JAXBElement<Integer> createSupDataArrayInt(Integer value) {
-        return new JAXBElement<Integer>(_SupDataArrayInt_QNAME, Integer.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayInt_QNAME, Integer.class, SupDataArray.class, value);
     }
 
     /**
@@ -435,7 +435,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "URI", scope = SupDataArray.class)
     public JAXBElement<String> createSupDataArrayURI(String value) {
-        return new JAXBElement<String>(_SupDataArrayURI_QNAME, String.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayURI_QNAME, String.class, SupDataArray.class, value);
     }
 
     /**
@@ -444,7 +444,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "boolean", scope = SupDataArray.class)
     public JAXBElement<Boolean> createSupDataArrayBoolean(Boolean value) {
-        return new JAXBElement<Boolean>(_SupDataArrayBoolean_QNAME, Boolean.class, SupDataArray.class, value);
+        return new JAXBElement<>(_SupDataArrayBoolean_QNAME, Boolean.class, SupDataArray.class, value);
     }
 
     /**
@@ -453,7 +453,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "ExperimentCollection")
     public JAXBElement<ExperimentCollection> createExperimentCollection(ExperimentCollection value) {
-        return new JAXBElement<ExperimentCollection>(_ExperimentCollection_QNAME, ExperimentCollection.class, null, value);
+        return new JAXBElement<>(_ExperimentCollection_QNAME, ExperimentCollection.class, null, value);
     }
 
 }

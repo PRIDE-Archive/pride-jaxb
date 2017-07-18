@@ -47,13 +47,13 @@ public class Software
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String name;
+    private String name;
     @XmlElement(required = true)
-    protected String version;
-    protected String comments;
+    private String version;
+    private String comments;
     @XmlAttribute
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar completionTime;
+    private XMLGregorianCalendar completionTime;
 
     /**
      * Gets the value of the name property.

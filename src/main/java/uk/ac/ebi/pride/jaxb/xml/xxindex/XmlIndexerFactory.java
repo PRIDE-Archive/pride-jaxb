@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.jaxb.xml.xxindex;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import psidev.psi.tools.xxindex.*;
 import psidev.psi.tools.xxindex.index.IndexElement;
 import psidev.psi.tools.xxindex.index.XpathIndex;
@@ -21,7 +23,7 @@ import java.util.Set;
  */
 public class XmlIndexerFactory {
 
-    private static final Logger logger = Logger.getLogger(XmlIndexerFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(XmlIndexerFactory.class);
 
     private static final XmlIndexerFactory instance = new XmlIndexerFactory();
 
@@ -93,7 +95,7 @@ public class XmlIndexerFactory {
                     xmlExtractor = new GzXmlElementExtractor();
                 } else {
                     // create xml element extractor
-                    xmlExtractor = new SimpleXmlElementExtractor();
+                    xmlExtractor = new FastXmlElementExtractor(xmlFile);
                 }
 
 
@@ -121,7 +123,7 @@ public class XmlIndexerFactory {
         }
 
         public List<String> getXmlStringList(String xpath) {
-            List<String> xmlList = new ArrayList<String>();
+            List<String> xmlList = new ArrayList<>();
             Iterator<String> xmlIter = getXmlStringIterator(xpath);
             while (xmlIter.hasNext()) {
                 xmlList.add(xmlIter.next());

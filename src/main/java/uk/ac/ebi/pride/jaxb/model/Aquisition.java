@@ -34,7 +34,7 @@ public class Aquisition
 
     private final static long serialVersionUID = 100L;
     @XmlAttribute(required = true)
-    protected int acqNumber;
+    private int acqNumber;
 
     /**
      * Gets the value of the acqNumber property.

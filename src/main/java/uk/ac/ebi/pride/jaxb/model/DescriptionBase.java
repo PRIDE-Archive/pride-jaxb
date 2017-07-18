@@ -41,7 +41,7 @@ public class DescriptionBase
 
     private final static long serialVersionUID = 100L;
     @XmlAttribute
-    protected String comment;
+    private String comment;
 
     /**
      * Gets the value of the comment property.

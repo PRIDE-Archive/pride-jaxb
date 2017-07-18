@@ -43,10 +43,10 @@ public class Contact
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String name;
+    private String name;
     @XmlElement(required = true)
-    protected String institution;
-    protected String contactInfo;
+    private String institution;
+    private String contactInfo;
 
     /**
      * Gets the value of the name property.

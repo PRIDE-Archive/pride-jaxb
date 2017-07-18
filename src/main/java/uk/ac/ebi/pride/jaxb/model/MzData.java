@@ -45,15 +45,15 @@ public class MzData
 {
 
     private final static long serialVersionUID = 100L;
-    protected List<CvLookup> cvLookup;
+    private List<CvLookup> cvLookup;
     @XmlElement(required = true)
-    protected Description description;
+    private Description description;
     @XmlElement(required = true)
-    protected SpectrumList spectrumList;
+    private SpectrumList spectrumList;
     @XmlAttribute(required = true)
-    protected String version;
+    private String version;
     @XmlAttribute(required = true)
-    protected String accessionNumber;
+    private String accessionNumber;
 
     /**
      * Gets the value of the cvLookup property.
@@ -79,7 +79,7 @@ public class MzData
      */
     public List<CvLookup> getCvLookup() {
         if (cvLookup == null) {
-            cvLookup = new ArrayList<CvLookup>();
+            cvLookup = new ArrayList<>();
         }
         return this.cvLookup;
     }

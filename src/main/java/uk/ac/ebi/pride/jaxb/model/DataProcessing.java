@@ -41,8 +41,8 @@ public class DataProcessing
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected Software software;
-    protected Param processingMethod;
+    private Software software;
+    private Param processingMethod;
 
     /**
      * Gets the value of the software property.

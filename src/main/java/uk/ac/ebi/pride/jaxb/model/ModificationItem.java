@@ -62,18 +62,18 @@ public class ModificationItem
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "ModLocation")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger modLocation;
+    private BigInteger modLocation;
     @XmlElement(name = "ModAccession", required = true)
-    protected String modAccession;
+    private String modAccession;
     @XmlElement(name = "ModDatabase", required = true)
-    protected String modDatabase;
+    private String modDatabase;
     @XmlElement(name = "ModDatabaseVersion")
-    protected String modDatabaseVersion;
+    private String modDatabaseVersion;
     @XmlElement(name = "ModMonoDelta")
-    protected List<String> modMonoDelta;
+    private List<String> modMonoDelta;
     @XmlElement(name = "ModAvgDelta")
-    protected List<String> modAvgDelta;
-    protected Param additional;
+    private List<String> modAvgDelta;
+    private Param additional;
 
     /**
      * Gets the value of the modLocation property.
@@ -195,7 +195,7 @@ public class ModificationItem
      */
     public List<String> getModMonoDelta() {
         if (modMonoDelta == null) {
-            modMonoDelta = new ArrayList<String>();
+            modMonoDelta = new ArrayList<>();
         }
         return this.modMonoDelta;
     }
@@ -224,7 +224,7 @@ public class ModificationItem
      */
     public List<String> getModAvgDelta() {
         if (modAvgDelta == null) {
-            modAvgDelta = new ArrayList<String>();
+            modAvgDelta = new ArrayList<>();
         }
         return this.modAvgDelta;
     }

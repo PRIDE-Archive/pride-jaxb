@@ -58,7 +58,7 @@ public class SupDataArray implements Serializable, PrideXmlObject
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected String arrayName;
+    private String arrayName;
     @XmlElementRefs({
         @XmlElementRef(name = "float", type = JAXBElement.class),
         @XmlElementRef(name = "URI", type = JAXBElement.class),
@@ -68,15 +68,15 @@ public class SupDataArray implements Serializable, PrideXmlObject
         @XmlElementRef(name = "string", type = JAXBElement.class),
         @XmlElementRef(name = "boolean", type = JAXBElement.class)
     })
-    protected List<JAXBElement<? extends Serializable>> floatOrDoubleOrInt;
+    private List<JAXBElement<? extends Serializable>> floatOrDoubleOrInt;
     @XmlAttribute(required = true)
-    protected int id;
+    private int id;
     @XmlAttribute(required = true)
-    protected int length;
+    private int length;
     @XmlAttribute(required = true)
-    protected boolean indexed;
+    private boolean indexed;
     @XmlAttribute
-    protected Integer offset;
+    private Integer offset;
 
     /**
      * Gets the value of the arrayName property.
@@ -132,7 +132,7 @@ public class SupDataArray implements Serializable, PrideXmlObject
      */
     public List<JAXBElement<? extends Serializable>> getFloatOrDoubleOrInt() {
         if (floatOrDoubleOrInt == null) {
-            floatOrDoubleOrInt = new ArrayList<JAXBElement<? extends Serializable>>();
+            floatOrDoubleOrInt = new ArrayList<>();
         }
         return this.floatOrDoubleOrInt;
     }

@@ -41,9 +41,9 @@ public class PrecursorList
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected List<Precursor> precursor;
+    private List<Precursor> precursor;
     @XmlAttribute(required = true)
-    protected int count;
+    private int count;
 
     /**
      * Gets the value of the precursor property.
@@ -69,7 +69,7 @@ public class PrecursorList
      */
     public List<Precursor> getPrecursor() {
         if (precursor == null) {
-            precursor = new ArrayList<Precursor>();
+            precursor = new ArrayList<>();
         }
         return this.precursor;
     }

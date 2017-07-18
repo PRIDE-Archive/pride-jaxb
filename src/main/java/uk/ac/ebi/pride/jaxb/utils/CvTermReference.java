@@ -22,7 +22,7 @@ public enum CvTermReference {
     private final String name;
     private final String parentAccession;
 
-    private CvTermReference(String cvLabel, String accession, String name, String parentAccession) {
+    CvTermReference(String cvLabel, String accession, String name, String parentAccession) {
         this.cvLabel = cvLabel;
         this.accession = accession;
         this.name = name;
@@ -33,7 +33,7 @@ public enum CvTermReference {
         return cvLabel;
     }
 
-    public String getAccession() {
+    private String getAccession() {
         return accession;
     }
 
@@ -41,7 +41,7 @@ public enum CvTermReference {
         return name;
     }
 
-    public Collection<String> getParentAccessions() {
+    private Collection<String> getParentAccessions() {
         return Arrays.asList(parentAccession.split(";"));
     }
 
@@ -50,7 +50,7 @@ public enum CvTermReference {
      * @param accession controlled vocabulary accession.
      * @return CvTermReference  Cv term.
      */
-    public static CvTermReference getCvRefByAccession(String accession) {
+    private static CvTermReference getCvRefByAccession(String accession) {
         CvTermReference cvTerm = null;
 
         CvTermReference[] cvTerms = CvTermReference.values();

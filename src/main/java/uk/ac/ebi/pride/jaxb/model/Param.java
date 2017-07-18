@@ -48,8 +48,8 @@ public class Param
 {
 
     private final static long serialVersionUID = 100L;
-    protected List<CvParam> cvParam;
-    protected List<UserParam> userParam;
+    private List<CvParam> cvParam;
+    private List<UserParam> userParam;
 
     /**
      * Gets the value of the cvParam property.
@@ -75,7 +75,7 @@ public class Param
      */
     public List<CvParam> getCvParam() {
         if (cvParam == null) {
-            cvParam = new ArrayList<CvParam>();
+            cvParam = new ArrayList<>();
         }
         return this.cvParam;
     }
@@ -124,7 +124,7 @@ public class Param
      */
     public List<UserParam> getUserParam() {
         if (userParam == null) {
-            userParam = new ArrayList<UserParam>();
+            userParam = new ArrayList<>();
         }
         return this.userParam;
     }

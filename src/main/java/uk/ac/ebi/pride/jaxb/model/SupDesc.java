@@ -43,10 +43,10 @@ public class SupDesc
 {
 
     private final static long serialVersionUID = 100L;
-    protected SupDataDesc supDataDesc;
-    protected List<SourceFile> supSourceFile;
+    private SupDataDesc supDataDesc;
+    private List<SourceFile> supSourceFile;
     @XmlAttribute(required = true)
-    protected int supDataArrayRef;
+    private int supDataArrayRef;
 
     /**
      * Gets the value of the supDataDesc property.
@@ -96,7 +96,7 @@ public class SupDesc
      */
     public List<SourceFile> getSupSourceFile() {
         if (supSourceFile == null) {
-            supSourceFile = new ArrayList<SourceFile>();
+            supSourceFile = new ArrayList<>();
         }
         return this.supSourceFile;
     }

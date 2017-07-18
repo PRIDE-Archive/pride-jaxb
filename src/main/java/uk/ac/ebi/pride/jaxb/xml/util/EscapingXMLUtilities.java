@@ -11,7 +11,7 @@ import it.unimi.dsi.fastutil.chars.CharOpenHashSet;
  */
 public class EscapingXMLUtilities {
 
-    public static final char substitute = '\uFFFD';
+    private static final char substitute = '\uFFFD';
     private static final CharOpenHashSet illegalChars;
 
     private EscapingXMLUtilities() {
@@ -114,8 +114,8 @@ public class EscapingXMLUtilities {
      * {@link EscapingXMLUtilities#substitute}. If no illegal characters
      * were found, no copy is made and the given string is returned.
      *
-     * @param string
-     * @return
+     * @param string remove escape characters
+     * @return a new String
      */
     public static String escapeCharacters(String string) {
 

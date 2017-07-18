@@ -1,7 +1,9 @@
 package uk.ac.ebi.pride.jaxb.xml.marshaller;
 
 import com.sun.xml.txw2.output.IndentingXMLStreamWriter;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.ac.ebi.pride.jaxb.model.ExperimentCollection;
 import uk.ac.ebi.pride.jaxb.model.ModelConstants;
 import uk.ac.ebi.pride.jaxb.model.PrideXmlObject;
@@ -27,7 +29,7 @@ import java.io.Writer;
 @SuppressWarnings("unused")
 public class PrideXmlMarshallerFactory {
 
-    private static final Logger logger = Logger.getLogger(PrideXmlMarshallerFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(PrideXmlMarshallerFactory.class);
 
     private static PrideXmlMarshallerFactory instance = new PrideXmlMarshallerFactory();
     private static JAXBContext jc = null;

@@ -38,13 +38,13 @@ public class CvParam
 
     private final static long serialVersionUID = 100L;
     @XmlAttribute(required = true)
-    protected String cvLabel;
+    private String cvLabel;
     @XmlAttribute(required = true)
-    protected String accession;
+    private String accession;
     @XmlAttribute(required = true)
-    protected String name;
+    private String name;
     @XmlAttribute
-    protected String value;
+    private String value;
 
     /**
      * Gets the value of the cvLabel property.

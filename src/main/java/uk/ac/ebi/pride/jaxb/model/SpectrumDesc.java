@@ -45,9 +45,9 @@ public class SpectrumDesc
 
     private final static long serialVersionUID = 100L;
     @XmlElement(required = true)
-    protected SpectrumSettings spectrumSettings;
-    protected PrecursorList precursorList;
-    protected List<String> comments;
+    private SpectrumSettings spectrumSettings;
+    private PrecursorList precursorList;
+    private List<String> comments;
 
     /**
      * Gets the value of the spectrumSettings property.
@@ -121,7 +121,7 @@ public class SpectrumDesc
      */
     public List<String> getComments() {
         if (comments == null) {
-            comments = new ArrayList<String>();
+            comments = new ArrayList<>();
         }
         return this.comments;
     }

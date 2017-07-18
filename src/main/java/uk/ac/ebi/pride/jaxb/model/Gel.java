@@ -45,8 +45,8 @@ public abstract class Gel
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "GelLink", required = true)
-    protected String gelLink;
-    protected Param additional;
+    private String gelLink;
+    private Param additional;
 
     /**
      * Gets the value of the gelLink property.

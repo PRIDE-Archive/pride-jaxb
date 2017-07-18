@@ -46,13 +46,13 @@ public class TwoDimensionalIdentification
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "Gel")
-    protected SimpleGel gel;
+    private SimpleGel gel;
     @XmlElement(name = "GelLocation")
-    protected GelLocation gelLocation;
+    private GelLocation gelLocation;
     @XmlElement(name = "MolecularWeight")
-    protected Double molecularWeight;
+    private Double molecularWeight;
     @XmlElement(name = "pI")
-    protected Double pi;
+    private Double pi;
 
     /**
      * Gets the value of the gel property.

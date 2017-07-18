@@ -36,9 +36,9 @@ public class UserParam
 
     private final static long serialVersionUID = 100L;
     @XmlAttribute(required = true)
-    protected String name;
+    private String name;
     @XmlAttribute
-    protected String value;
+    private String value;
 
     /**
      * Gets the value of the name property.

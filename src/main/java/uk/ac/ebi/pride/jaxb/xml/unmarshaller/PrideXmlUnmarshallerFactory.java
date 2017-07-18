@@ -1,6 +1,8 @@
 package uk.ac.ebi.pride.jaxb.xml.unmarshaller;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.InputSource;
 import uk.ac.ebi.pride.jaxb.model.ModelConstants;
 import uk.ac.ebi.pride.jaxb.model.PrideXmlObject;
@@ -21,9 +23,9 @@ import java.io.StringReader;
  */
 public class PrideXmlUnmarshallerFactory {
 
-    private static final Logger logger = Logger.getLogger(PrideXmlUnmarshallerFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(PrideXmlUnmarshallerFactory.class);
 
-    private static PrideXmlUnmarshallerFactory instance = new PrideXmlUnmarshallerFactory();
+    private static final PrideXmlUnmarshallerFactory instance = new PrideXmlUnmarshallerFactory();
     private static JAXBContext jc = null;
 
     private PrideXmlUnmarshallerFactory() {

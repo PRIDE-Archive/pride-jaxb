@@ -59,23 +59,23 @@ public class Experiment
 
     private final static long serialVersionUID = 100L;
     @XmlElement(name = "ExperimentAccession")
-    protected String experimentAccession;
+    private String experimentAccession;
     @XmlElement(name = "Title", required = true)
-    protected String title;
+    private String title;
     @XmlElement(name = "Reference")
-    protected List<Reference> reference;
+    private List<Reference> reference;
     @XmlElement(name = "ShortLabel", required = true)
-    protected String shortLabel;
+    private String shortLabel;
     @XmlElement(name = "Protocol", required = true)
-    protected Protocol protocol;
+    private Protocol protocol;
     @XmlElement(required = true)
-    protected MzData mzData;
+    private MzData mzData;
     @XmlElements({
         @XmlElement(name = "GelFreeIdentification", type = GelFreeIdentification.class),
         @XmlElement(name = "TwoDimensionalIdentification", type = TwoDimensionalIdentification.class)
     })
-    protected List<Identification> gelFreeIdentificationOrTwoDimensionalIdentification;
-    protected Param additional;
+    private List<Identification> gelFreeIdentificationOrTwoDimensionalIdentification;
+    private Param additional;
 
     /**
      * Gets the value of the experimentAccession property.
@@ -149,7 +149,7 @@ public class Experiment
      */
     public List<Reference> getReference() {
         if (reference == null) {
-            reference = new ArrayList<Reference>();
+            reference = new ArrayList<>();
         }
         return this.reference;
     }
@@ -251,7 +251,7 @@ public class Experiment
      */
     public List<Identification> getGelFreeIdentificationOrTwoDimensionalIdentification() {
         if (gelFreeIdentificationOrTwoDimensionalIdentification == null) {
-            gelFreeIdentificationOrTwoDimensionalIdentification = new ArrayList<Identification>();
+            gelFreeIdentificationOrTwoDimensionalIdentification = new ArrayList<>();
         }
         return this.gelFreeIdentificationOrTwoDimensionalIdentification;
     }

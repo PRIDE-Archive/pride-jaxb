@@ -15,11 +15,11 @@ import java.io.Writer;
  */
 public interface PrideXmlMarshaller {
 
-    public <T extends PrideXmlObject> String marshall(T object);
+    <T extends PrideXmlObject> String marshall(T object);
 
-    public <T extends PrideXmlObject> void marshall(T object, OutputStream os);
+    <T extends PrideXmlObject> void marshall(T object, OutputStream os);
 
-    public <T extends PrideXmlObject> void marshall(T object, Writer out);
+    <T extends PrideXmlObject> void marshall(T object, Writer out);
 
-    public <T extends PrideXmlObject> void marshall(T object, XMLStreamWriter writer);
+    <T extends PrideXmlObject> void marshall(T object, XMLStreamWriter writer);
 }
